@@ -1,0 +1,44 @@
+:root {
+  --back-to-top-color: black;
+  --back-to-top-color-rgb: 0, 0, 0;
+  --icon-arrow-up: white;
+}
+
+#backToTopBtn {
+  display: inline-block;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  z-index: 200;
+  width: 2.75rem;
+  height: 2.75rem;
+  background-color: var(--back-to-top-color);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 16px rgba(var(--back-to-top-color-rgb), 0.4);
+  transition: opacity 0.5s, visibility 0.5s;
+  will-change: opacity, visibility;
+}
+
+#backToTopBtn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#backToTopBtn:active {
+  cursor: grab;
+}
+
+#backToTopBtn:hover {
+  filter: brightness(1.2);
+}
+
+#iconArrowUp {
+  pointer-events: none;
+  fill: var(--icon-arrow-up);
+  width: 2rem;
+  height: 2rem;
+}
